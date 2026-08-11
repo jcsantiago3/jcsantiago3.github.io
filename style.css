@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    height: 5vh;
+    border: 1px solid #ccc;
+
+    display: flex;
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    /* or whatever fits your theme */
+    font-weight: bold;
+}
+
+section {
+    padding: 1% 5%;
+}
+
+#hero {
+    display: flex;
+    width: 100%;
+    height: 95vh;
+    align-items: flex-start;
+    background-image: url(images/pexels-seven11nash-380769.jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#value-proposition-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.value-proposition-container-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.value-proposition-container-item-icon {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.hero-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-column span {
+    max-width: 90%;
+    /* or any reasonable width */
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.released-works-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.released-works-card {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 30vh;
+    border-radius: 15px;
+    background-color: red;
+    overflow: hidden;
+}
+
+.released-works-card-image {
+    width: inherit;
+    height: 225px;
+    overflow: hidden;
+    background-image: url(images/10-3D-Video-Games-That-Would-Have-Been-Better-In-2D.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.released-works-card-descriptionarea {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    padding: 3%;
+}
+
+.work-cards-container {
+    display: flex;
+    width: inherit;
+    gap: 1%;
+}
+
+.released-games-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15vw;
+    min-height: 40vh;
+    padding: 1%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+
+}
+
+.released-games-card-icon-container {
+    display: flex;
+    width: inherit;
+    height: 15vw;
+}
+
+.released-games-card-icon {
+    width: 13vw;
+    height: 13vw;
+    border-radius: 10%;
+    margin: 0 auto;
+    background-image: url(images/Onazoo-Treasures-Puzzle-Blast);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-area {
+    display: flex;
+    width: 100%;
+    height: 400px;
+
+}
+
+.works-header-column {
+    width: 50%;
+    height: inherit
+}
+
+.screenshotsarea {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: auto;
+    width: 100%;
+}
+
+.screenshot {
+    background-color: grey;
+    width: 340px;
+    height: 191px;
+    border-radius: 20px;
+    flex: 0 0 auto;
+}
