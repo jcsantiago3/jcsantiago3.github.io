@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "IBM-Bold";
+  src: url("fonts/IBMPlexMono-Bold.ttf");
+}
+@font-face {
+  font-family: "IBM-Reg";
+  src: url("fonts/IBMPlexMono-Regular.ttf");
+}
+
+/* ========== CSS RESET (modern minimal) ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========== MEDIA DEFAULTS ========== */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ========== FORM ELEMENTS ========== */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ========== ROOT VARIABLES ========== */
+:root {
+  --color-bg: #111;
+  --color-text: #fff;
+  --color-primary: #4f46e5;
+
+  --font-base: system-ui, sans-serif;
+  --font-main: "IBM-Bold", sans-serif;
+  --font-sub: "IBM-Reg", sans-serif;
+}
+
+/* ========== BASE STYLES ========== */
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ========== LAYOUT HELPERS ========== */
+.container {
+  width: min(1200px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* ========== UTILITIES ========== */
+.hidden {
+  display: none !important;
+}
+
+main {
+  display: flex;
+  flex-direction: column; /* Stacks the titles vertically */
+  justify-content: center; /* Centers them vertically on the screen */
+  align-items: center; /* Centers them horizontally */
+  text-align: center; /* Centers the text lines themselves */
+  min-height: 100vh; /* Forces the container to fill the entire screen height */
+}
+
+.main-title {
+  font-family: var(--font-main);
+  font-size: 5vw;
+}
+
+.sub-title {
+  font-family: var(--font-sub);
+}
