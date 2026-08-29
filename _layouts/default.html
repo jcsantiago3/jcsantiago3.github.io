@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title }} | JC SANTIAGO</title>
+
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ '/front-page.html' | relative_url }}">Works</a></li>
+                <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+                <li><a href="{{ '/now.html' | relative_url }}">Now</a></li>
+                <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+                <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        &copy; Juan Carlos Santiago - 2025. All HTML, CSS, and JS are custom made.
+    </footer>
+
+</body>
+
+</html>
