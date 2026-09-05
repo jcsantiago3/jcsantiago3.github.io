@@ -1,0 +1,22 @@
+---
+layout: default
+title: Games
+permalink: /games/
+---
+
+<section id="featured-games">
+  <h1>Featured Games</h1>
+  <h2>My recent games</h2>
+
+  <div class="fg-grid">
+    {% for game in site.games %}
+    <a href="{{ game.url | relative_url }}" class="fg-card">
+      <img src="" alt="" />
+
+      <div class="fg-content-info">
+        <span class="fg-content-title">{{ game.title }}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
