@@ -87,3 +87,13 @@ main {
 .sub-title {
   font-family: var(--font-sub);
 }
+
+@media (max-width: 540px) {
+  .main-title {
+    font-size: 12vw;
+  }
+
+  .sub-title {
+    font-size: 3vw;
+  }
+}

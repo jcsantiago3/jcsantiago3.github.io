@@ -1,37 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
 
-    <title>{{ page.title }} | JC SANTIAGO</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}" />
+  </head>
 
-    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
-</head>
-
-<body>
-
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="{{ '/front-page.html' | relative_url }}">Works</a></li>
-                <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-                <li><a href="{{ '/now.html' | relative_url }}">Now</a></li>
-                <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-                <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-            </ul>
-        </nav>
+      <a href="{{ '/front-page.html' | relative_url }}"
+        ><img id="logo" src="images/Sanni.jpg"
+      /></a>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="{{ '/about.html' | relative_url }}"
+              class="{% if page.url == '/about.html' %}active{% endif %}"
+              >About</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="{{ '/writing/' | relative_url }}"
+              class="{% if page.url == '/writing/' %}active{% endif %}"
+              >Writing</a
+            >
+          </li>
+          <li>
+            <a
+              href="{{ '/games/' | relative_url }}"
+              class="{% if page.url == '/games/' %}active{% endif %}"
+              >Games</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="{{ '/art/' | relative_url }}"
+              class="{% if page.url == '/art/' %}active{% endif %}"
+              >Art</a
+            >
+          </li>
+
+          <li>
+            <a
+              href="{{ '/contact.html' | relative_url }}"
+              class="{% if page.url == '/contact.html' %}active{% endif %}"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-        {{ content }}
-    </main>
+    <main>{{ content }}</main>
 
     <footer>
-        &copy; Juan Carlos Santiago - 2025. All HTML, CSS, and JS are custom made.
+      <div class="footer-contents">
+        <div class="footer-column">
+          <h1>JC Santiago</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
+            beatae inventore eveniet quas voluptatem ea, iste dicta, enim
+            debitis modi repellendus. Modi omnis velit inventore unde molestias
+            ex, odio suscipit!
+          </p>
+          <div class="icons-container"><img /><img /><img /><img /></div>
+        </div>
+        <div class="footer-column">
+          <h1>Navigation</h1>
+          <ul>
+            <li><a href="{{ '/front-page.html' | relative_url }}">Home</a></li>
+            <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
+            <li><a href="{{ '/writing/' | relative_url }}">Writing</a></li>
+            <li><a href="{{ '/games/' | relative_url }}">Games</a></li>
+            <li><a href="{{ '/art/' | relative_url }}">Art</a></li>
+            <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
-
-</body>
-
+    <span>&copy; 2026 Juan Carlos Santiago</span>
+  </body>
 </html>

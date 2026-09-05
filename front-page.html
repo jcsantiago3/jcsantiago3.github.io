@@ -4,30 +4,37 @@ title: Home
 ---
 
 <section id="hero">
-    <div class="hero-column">
-        <h1>TEST</h1>
-        <span>
-            Lorem ipsum dolor sit amet, lorem ipsum cupidatat sunt labore duis
-            qui eu dolore fugiat mollit dolore adipiscing consequat voluptate
-        </span>
-    </div>
-
-    <div class="hero-column"></div>
+    <h1>Hi, I'm JC Santiago. <span id="blinking">_</span></h1>
+    <h2>
+      I am a Game Designer, 3D Artist, and Programmer who loves creating
+      experiences.
+    </h2>
+    <div class="icons-container"><img /><img /><img /><img /></div>
 </section>
-
-<section>
-    <h1>Why work with me</h1>
-
-    <div id="value-proposition-container">
-
-        <div class="value-proposition-container-item">
-            <div class="value-proposition-container-item-icon"></div>
-            <span class="value-proposition-container-item-text">Icon 1</span>
-        </div>
-
-        <!-- etc. -->
-
-    </div>
+<section id="Featured Writing">
+  <h1>Featured Writing</h1>
+  <h2>My recent writing</h2>
+  {% for post in site.posts  limit:5 %}
+  <a href="{{ post.url | relative_url }}"> <div class="fw-content">
+    <span class="fw-content-title">{{ post.title }}</h1>
+    <span class="fw-content-subtitle">{{ post.excerpt }}</span
+    ><span class="fw-content-date"> - {{ post.date | date: "%Y - %m - %d" }}</span>
+  </div> </a>
+  {% endfor %}
 </section>
+<section id="featured-games">
+  <h1>Featured Games</h1>
+  <h2>My recent games</h2>
 
-<!-- remaining content -->
+  <div class="fg-grid">
+	{% for game in site.games limit:3 %}
+	<a href="{{ game.url | relative_url }}" class="fg-card">
+		<img src="" alt="">
+
+		<div class="fg-content-info">
+		<span class="fg-content-title">{{ game.title }}</span>
+		</div>
+	</a>
+	{% endfor %}
+  </div>
+</section>

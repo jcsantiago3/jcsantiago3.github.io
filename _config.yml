@@ -1,2 +1,6 @@
 title: JC Santiago
 description: Game Designer, 3D Artist, and Multimedia Artist
+
+collections:
+  games:
+    output: true
